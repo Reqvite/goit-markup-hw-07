@@ -14,7 +14,7 @@
 --team-social-icons: #AFB1B8;
 }
 
-/*-----------------General*-----------------------*/
+/*______________General*____________*/
 body {
     background-color: var(--primary-white-color);
     color: var(--primary-text-color);
@@ -67,37 +67,39 @@ img{
     text-align: center;
     letter-spacing: 0.03em;
 }
-/* All lists*/
+
+/*_____ALL LISTS____*/
 .list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-/*All links*/
+/*_____ALL LISTS____*/
 .link{
     text-decoration: none;
 }
 
-/*----Header----*/
-.page-header{
+/*_____________HEADER_____________*/
+.header{
     border-bottom: 1px solid var(--border-color);
 }
-.header{
+
+.header__container{
     display: flex;
     text-align: center;
 }
 
- /*Logo*/
-.navbar{
+.navbar {
     display: flex;
     text-align: center;
 }
-.logo,
-.logo-footer {
-    padding-top: 24px;
+
+ /*__LOGO__*/
+.logo{
     padding-bottom: 25px;
-
+    padding-top: 24px;
+    
     color: var(--accent-color);
     font-family: Raleway, sans-serif;
     font-weight: 700;
@@ -106,17 +108,19 @@ img{
     letter-spacing: 0.03em;
 }
 
-.logo-footer{
-    padding: 0px;
-}
-.logo-black {
+.navbar__logo--black {
     color: var(--primary-text-color);
 }
 
-.logo-white{
- color: var(--primary-white-color);
+.footer-address__logo{
+    padding: 0px;
 }
 
+.footer-address__logo--white {
+    color: var(--primary-white-color);
+}
+
+/*________*/
 
 .site-nav{
     display: flex;
@@ -124,19 +128,20 @@ img{
     
 }
 
-.site-nav .item {
+.site-nav__item {
     position: relative;
 }
 
-.site-nav .item + .item{
+.site-nav__item:not(:first-child){
     margin-left: 50px;
 }
-.site-nav .link {
-    display: block;
+
+.site-nav__link {
+    display: inline-block;
     padding-top: 32px;
     padding-bottom: 32px;
 
-    color: var(--primary-text-color);
+    color: currentColor;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
@@ -144,13 +149,12 @@ img{
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
  
-.site-nav .link::after{
+.site-nav__link::after{
     content: '';
 
     position: absolute;
     bottom: -2px;
     left: 0;
-
     display: block;
 
     width: 100%;
@@ -161,23 +165,23 @@ img{
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
-.site-nav .link.current::after{
+.site-nav__link--current::after{
     transform: scaleX(1);
 }
 
-.site-nav .link:hover::after,
-.site-nav .link:focus::after{
+.site-nav__link:hover::after,
+.site-nav__link:focus::after{
     transform: scaleX(1);
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus,
-.contacts .link:hover,
-.contacts .link:focus {
+.site-nav__link:hover,
+.site-nav__link:focus,
+.contacts__link:hover,
+.contacts__link:focus {
      color: var(--color-hover);
 }
 
-.site-nav .link.current {
+.site-nav__link--current {
      color: var(--accent-color);
 }
 
@@ -187,19 +191,17 @@ img{
 
 }
 
-.contacts-icon{
+.contacts__icon{
     margin-right: 10px;
     fill: currentColor;
 
 }
 
-
-.contacts .item + .item{
+.contacts__item:not(:first-child){
     margin-left: 50px;
 }
 
-
-.contacts .link {
+.contacts__link {
     display: flex;
     align-items: center;
     padding-top: 32px;
@@ -214,7 +216,7 @@ img{
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
     
- /*Footer*/
+ /*_______FOOTER________*/
     
 .footer {
     padding-top: 60px;
@@ -224,7 +226,7 @@ img{
     
 }
 
- .footer-flex {
+ .footer__container {
      display: flex;
      align-items: baseline;
  }
@@ -233,39 +235,33 @@ img{
     margin-top: 20px;
 }
 
-.address-list .item + .item{
-    margin-top: 9px;
-}
-
-.address-city {
+.address__list{
     color: var(--primary-white-color);
     font-style: normal;
-    font-weight: 400;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-
+     font-weight: 400;
+     line-height: 1.71;
+     letter-spacing: 0.03em;
 }
-    
-.address-mail,
-.address-tel {
-    font-style: normal;
+.address__item:not(:first-child){
+    margin-top: 9px;
+}
+ 
+.address__contacts {
     color: var(--footer-address-color);
-    font-weight: 400;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
  }
- .address-mail:focus,
- .address-mail:hover,
- .address-tel:focus,
- .address-tel:hover{
+ .address__contacts:focus,
+ .address__contacts:hover {
      color: var(--color-hover);
  }
 
- .footer-text{
-     margin-bottom: 20px;
+ .footer-social {
+     margin-left: 70px;
+ }
+
+ .footer-social__text{
+    margin-bottom: 20px;
 
     color: var(--primary-white-color);
     font-weight: 700;
@@ -275,21 +271,17 @@ img{
     text-transform: uppercase;
  }
 
-.footer-social{
-    margin-left: 70px;
-}
+.footer-social__list {
+     display: flex;
 
-.footer-social-list .item+.item{
+ }
+
+.footer-social__item:not(:first-child){
     margin-left: 10px;
     
 }
-.footer-social-list{
-    display: flex;
 
-}
-
-
-.footer-social-thumb{
+.footer-social__thumb{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -304,43 +296,39 @@ img{
 
 }
 
-.footer-social-thumb:hover,
-.footer-social-thumb:focus{
+.footer-social__thumb:hover,
+.footer-social__thumb:focus{
     background-color: var(--accent-color);
 }
 
-.subscribe-information{
+.footer-subscribe{
     margin-left: auto;
 }
 
-.subscribe-form{
-    display: flex;
-
-}
-
-.subscribe-icon {
-    margin-left: 10px;
-
-}
-
-.button.btn-subscribe{
-    display: inline-flex;
-    align-items: center;
-    margin-left: 12px;
-    padding: 10px 29px;
-}
-
-.subscribe-text{
+.footer-subscribe__text {
     margin-bottom: 20px;
 
     color: var(--primary-white-color);
     font-style: normal;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 1.14;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
 }
+
+.subscribe__form{
+    display: flex;
+}
+
+.subscribe__button--end{
+    margin-left: 12px;
+}
+
+.subscribe__icon {
+    margin-left: 10px;
+}
+
 .subscribe input{
     margin: 0;
     color: var(--primary-white-color);
@@ -362,20 +350,29 @@ img{
 
         /*Buttons*/
 .button {
-    display: inline-block;
-    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px 32px;
     min-width: 200px;
-    border: 1px solid transparent;
 
+    border-radius: 4px;
+    border: 1px solid transparent;
     font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
     text-align: center;
     color: var(--primary-white-color);
     background-color: var(--accent-color);
     cursor: pointer;
+    
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
-.button.primary {
+/*.button.primary {
     
     font-weight: 700;
     font-size: 16px;
@@ -385,7 +382,7 @@ img{
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
-
+*/
 .button.secondary {
     min-width: 73px;
     padding: 6px 22px;
@@ -401,7 +398,7 @@ img{
     color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button-modal {
+.modal__btn-close {
     display: flex;
     position: absolute;
     top: 8px;
@@ -415,18 +412,20 @@ img{
      border: 1px solid rgba(0, 0, 0, 0.1);
      background-color: #FFFFFF;
      cursor: pointer;
+
      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
-.button-modal:hover,
-.button-modal:focus{
+.modal__btn-close:hover,
+.modal__btn-close:focus{
+    outline: var(--accent-color);
     border-color: var(--accent-color);
     fill: var(--accent-color);
 }
     
-.button.primary:focus,
-.button.primary:hover{
+.button:focus,
+.button:hover{
     background-color:var(--color-hover) ;
 }
 
@@ -515,7 +514,7 @@ img{
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-text {
+.modal__text {
     margin-bottom: 12px;
     text-align: center;
     font-weight: 700;
@@ -549,7 +548,7 @@ img{
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form:focus-within > .modal-icon,
+.modal-form:focus-within .modal-form__icon,
 .modal-form input:focus,
 .modal-form textarea:focus {
     outline: none;
@@ -574,7 +573,7 @@ img{
         color: rgba(117, 117, 117, 0.5);
 }
 
-.form-text{
+.modal-form__text{
     margin-bottom: 4px;
         font-weight: 400;
             font-size: 12px;
@@ -583,7 +582,7 @@ img{
             color: var(--secondary-text-color);
 }
 
-.modal-icon{
+.modal-form__icon{
     position: absolute;
     top: 50%;
     left: 15px;
@@ -593,12 +592,12 @@ img{
 
 
 .modal-policy label{
-        display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 30px;
+    display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-bottom: 30px;
 }
-.check-icon{
+.modal-policy__check-icon{
     display: inline-block;
     margin-right: 8.38px;
     border: 2px solid #212121;
@@ -607,7 +606,7 @@ img{
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.policy-text{
+.modal-policy__text{
     font-weight: 400;
         font-size: 14px;
         line-height: 1.71;
@@ -615,48 +614,35 @@ img{
         color: var(--secondary-text-color);
 }
 
-.checkbox:checked + .check-icon{
+.modal-policy__checkbox:checked + .modal-policy__check-icon{
     background-color: var(--accent-color);
     border-color: var(--accent-color);
 }
 
-.checkbox:focus + .check-icon{
+.modal-policy__checkbox:focus + .modal-policy__check-icon{
     border-color: var(--accent-color);
 }
 
-.policy-link{
+.modal-policy__link{
     margin-left: 3px;
+
+    text-decoration: underline;
     color: var(--accent-color);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.policy-link:hover{
+.modal-policy__link:hover{
     color: var(--color-hover);
 }
-.submit-button{
-    display: flex;    
-    padding: 10px 55px;
+
+.modal__btn{
+    justify-content: center;
+    display: flex;
     margin: auto;
-    color: var(--primary-white-color);
-    background-color: var(--accent-color);
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-    border-radius: 4px ;
-    border-color: transparent;
-    cursor: pointer;
+
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.submit-button:hover,
-.submit-button:focus{
-    background-color: var(--color-hover);
-}
-        /*Section features*/
+/*___________Section Features___________*/
 
 .features{
     display: flex;
