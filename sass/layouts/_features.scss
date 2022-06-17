@@ -4,14 +4,16 @@
     &__item {
             width: 270px;
         }
+        
     &__item:not(:first-child) {
             margin-left: 30px;
         }
     &__thumb {
-            margin-bottom: 30px;
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-bottom: 30px;
+
             border-radius: 4px;
             height: 120px;
             background-color: $features-bg-color;
