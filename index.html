@@ -15,8 +15,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/main.min.css"
+    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <!--Верхняя линия -->
@@ -463,21 +463,31 @@
         <form>
           <div class="modal-form">
             <label for="name" class="modal-form__text">Имя</label>
-            <input type="text" name="name" id="name" />
+            <input
+              class="modal-form__input"
+              type="text"
+              name="name"
+              id="name"
+            />
             <svg class="modal-form__icon" width="12" height="12">
               <use href="./images/sprite.svg#icon-person"></use>
             </svg>
           </div>
           <div class="modal-form">
             <label for="tel" class="modal-form__text">Телефон</label>
-            <input type="tel" name="tel" id="tel" />
+            <input class="modal-form__input" type="tel" name="tel" id="tel" />
             <svg class="modal-form__icon" width="13" height="13">
               <use href="./images/sprite.svg#icon-tel-modal"></use>
             </svg>
           </div>
           <div class="modal-form">
             <label for="mail" class="modal-form__text">Почта</label>
-            <input type="email" name="mail" id="mail" />
+            <input
+              class="modal-form__input"
+              type="email"
+              name="mail"
+              id="mail"
+            />
             <svg class="modal-form__icon" width="15" height="12">
               <use href="./images/sprite.svg#icon-mail-modal"></use>
             </svg>
@@ -485,6 +495,7 @@
           <div class="modal-form">
             <label for="comment" class="modal-form__text">Комментарий</label>
             <textarea
+              class="modal-form__textarea"
               name="comment"
               id="comment"
               rows="7"
@@ -492,8 +503,13 @@
             ></textarea>
           </div>
           <div class="modal-policy">
-            <label for="policy" class="modal-policy__text">
+            <label
+              class="modal-policy__label"
+              for="policy"
+              class="modal-policy__text"
+            >
               <input
+                class="modal-policy__input"
                 type="checkbox"
                 name="policy"
                 id="policy"
