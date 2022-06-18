@@ -101,6 +101,9 @@ body {
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.button:focus, .button:hover {
+  background-color: #188ce8;
+}
 
 .filter__btn {
   min-width: 73px;
@@ -113,17 +116,15 @@ body {
   letter-spacing: 0.03em;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.filter__btn:focus, .filter__btn:hover {
+  color: #FFFFFF;
+  background-color: #188ce8;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
 
 .filter__btn--main {
   color: #FFFFFF;
   background-color: #188ce8;
-}
-
-.filter__btn:focus,
-.filter__btn:hover {
-  color: #FFFFFF;
-  background-color: #188ce8;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .modal__btn-close {
@@ -141,17 +142,10 @@ body {
   cursor: pointer;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.modal__btn-close:hover,
-.modal__btn-close:focus {
+.modal__btn-close:hover, .modal__btn-close:focus {
   outline: #2196F3;
   border-color: #2196F3;
   fill: #2196F3;
-}
-
-.button:focus,
-.button:hover {
-  background-color: #188ce8;
 }
 
 .backdrop {
